@@ -17,7 +17,18 @@ Our feature engineering pipeline transforms raw agricultural data into powerful 
 - **Heat Index**:  
   Computed using Rothfusz regression for apparent temperature:
 
-  Where T is temperature (°F) and R is relative humidity
+  The formula for calculating the value is:
+
+$$
+-42.379 + 2.04901523 \cdot \text{temp\_F} + 10.14333127 \cdot \text{humidity} \\
+- 0.22475541 \cdot \text{temp\_F} \cdot \text{humidity} - 0.00683783 \cdot \text{temp\_F}^2 \\
+- 0.05481717 \cdot \text{humidity}^2 + 0.00122874 \cdot \text{temp\_F}^2 \cdot \text{humidity} \\
++ 0.00085282 \cdot \text{temp\_F} \cdot \text{humidity}^2 - 0.00000199 \cdot \text{temp\_F}^2 \cdot \text{humidity}^2
+$$
+
+Where:
+* `temp_F` represents temperature in Fahrenheit.
+* `humidity` represents relative humidity.
 
 ### 3. Soil Fertility Metrics
 - **Fertility Index**:  
