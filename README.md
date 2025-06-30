@@ -10,7 +10,7 @@ Our feature engineering pipeline transforms raw agricultural data into powerful 
 - **P/K Ratio**: `Phosphorous / Potassium`  
   Quantifies phosphorous-potassium relationship for root development
 
-![img.png][files/npk_ratios.png]
+![img.png](files/npk_ratios.png)
 
 ### 2. Temperature Transformations
 - **Fahrenheit Conversion**:  
