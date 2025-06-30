@@ -20,10 +20,12 @@ Our feature engineering pipeline transforms raw agricultural data into powerful 
   The formula for calculating the value is:
 
 $$
-(-42.379 + 2.04901523*temp_F + 10.14333127*humidity 
-          - 0.22475541*temp_F*humidity - 0.00683783*temp_F**2 
-          - 0.05481717*humidity**2 + 0.00122874*temp_F**2*humidity 
-          + 0.00085282*temp_F*humidity**2 - 0.00000199*temp_F**2*humidity**2)
+
+(-42.379 + 2.04901523 x temp_F + 10.14333127 x humidity 
+          - 0.22475541 x temp_F x humidity - 0.00683783 x temp_F^2 
+          - 0.05481717 x humidity^2 + 0.00122874 x temp_F^2 x humidity 
+          + 0.00085282 x temp_F x humidity^2 - 0.00000199 x temp_F^2 x humidity^2)
+
 $$
 
 Where:
