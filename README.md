@@ -10,6 +10,8 @@ Our feature engineering pipeline transforms raw agricultural data into powerful 
 - **P/K Ratio**: `Phosphorous / Potassium`  
   Quantifies phosphorous-potassium relationship for root development
 
+![img][]
+
 ### 2. Temperature Transformations
 - **Fahrenheit Conversion**:  
   `temp_F = (Temperature * 9/5) + 32`  
@@ -17,20 +19,7 @@ Our feature engineering pipeline transforms raw agricultural data into powerful 
 - **Heat Index**:  
   Computed using Rothfusz regression for apparent temperature:
 
-  The formula for calculating the value is:
 
-$$
-
-(-42.379 + 2.04901523 x temp_F + 10.14333127 x humidity 
-          - 0.22475541 x temp_F x humidity - 0.00683783 x temp_F^2 
-          - 0.05481717 x humidity^2 + 0.00122874 x temp_F^2 x humidity 
-          + 0.00085282 x temp_F x humidity^2 - 0.00000199 x temp_F^2 x humidity^2)
-
-$$
-
-Where:
-* `temp_F` represents temperature in Fahrenheit.
-* `humidity` represents relative humidity.
 
 ### 3. Soil Fertility Metrics
 - **Fertility Index**:  
@@ -62,11 +51,11 @@ Mean-encoded fertilizer usage by soil type and crop type
 
 ## Feature Impact Analysis 📈
 
-This advanced feature engineering allowed the model to make on average 17% more accurate predictions
+Our domain-specific feature transformations delivered a 17% absolute improvement in prediction accuracy compared to using raw features alone.
 
 ## Scientific Foundations 🔬
 
-Our feature engineering draws from agricultural science principles:
+Feature engineering draws from agricultural science principles:
 - **Liebig's Law of the Minimum**: Nutrient ratios identify limiting factors
 - **Van't Hoff Equation**: Temperature transformations model biochemical reaction rates
 - **Soil Fertility Indexing**: Weighted nutrient scoring based on FAO guidelines
