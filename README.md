@@ -16,38 +16,15 @@ Our feature engineering pipeline transforms raw agricultural data into powerful 
 - **Fahrenheit Conversion**:  
   `temp_F = (Temperature * 9/5) + 32`  
   Provides alternative temperature representation
+  
 - **Heat Index**:  
   Computed using Rothfusz regression for apparent temperature:
-
-
 
 ### 3. Soil Fertility Metrics
 - **Fertility Index**:  
 `(Normalized Nitrogen * 0.45) + (Normalized Phosphorous * 0.35) + (Normalized Potassium * 0.2)`  
 Composite soil quality score with nutrient weighting
 
-### 4. Categorical Interactions
-- **Soil-Crop Synergy**:  
-Combined `Soil_Type` and `Crop_Type` into interaction features:  
-`Sandy_Rice`, `Clayey_Wheat`, etc.
-- **Nutrient Sufficiency Flags**:  
-Binary indicators for critical thresholds:  
-`Low_Nitrogen = Nitrogen < 30`, `Low_Phosphorous = Phosphorous < 15`
-
-### 5. Environmental Stress Indicators
-- **Moisture-Temperature Index**:  
-`Moisture / max(1, Temperature-25)`  
-Quantifies evaporation stress
-- **Humidity Compensation Factor**:  
-`Humidity * exp(-0.1*(Temperature-25))`  
-Models non-linear humidity effects
-
-### 6. Domain-Specific Transformations
-- **Nutrient Logarithmic Scaling**:  
-`log_Nitrogen = log1p(Nitrogen)`  
-Addresses skewed distributions
-- **Categorical Embedding Proxies**:  
-Mean-encoded fertilizer usage by soil type and crop type
 
 ## Feature Impact Analysis 📈
 
